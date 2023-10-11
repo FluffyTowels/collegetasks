@@ -1,4 +1,6 @@
-﻿using System;
+//!!! Это очень плохой и запутанный способ это делать!!!
+
+using System;
 namespace Eratosphenes
 {
     class Prog
