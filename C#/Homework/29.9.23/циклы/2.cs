@@ -6,12 +6,12 @@ namespace NatNum
     {
         static void Main()
         {
-            string inptstr = Console.ReadLine();
-            int[] dgts = new int[inptstr.Length];
-            int inpt = Convert.ToInt32(inptstr);
-            for (int i = 0; i < inptstr.Length; i++)
+            string inptstr = Console.ReadLine();                                        //Ввод числа
+            int[] dgts = new int[inptstr.Length];                                       //Создаётся массив для цифр
+            int inpt = Convert.ToInt32(inptstr);                                        //Ввденное число переводитя в int
+            for (int i = 0; i < inptstr.Length; i++)                                    //Цифры вводятся в массив
             {
-                dgts[i] = inpt % 10;
+                dgts[i] = inpt % 10;                                                                    
                 inpt /= 10;
             }
             
