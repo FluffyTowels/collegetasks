@@ -1,5 +1,3 @@
-//!!! Это очень плохой и запутанный способ это делать!!!
-
 using System;
 namespace Eratosphenes
 {
@@ -15,26 +13,31 @@ namespace Eratosphenes
                 nums[i - 2] = i;
 
             }
-            for (int div = 0; div < nums.Length; div++)
+ 
+            for (int i = 0; i < nums.Length; i++)
             {
-                if (nums[div] != 0)
+                if (nums[i] != 0)
                 {
-                    for (int num = (div + 1); num < nums.Length; num++)
+                    for (int j = 2 * nums[i]; j - 2 <= nums.Length ; j += nums[i])
                     {
-                        if (nums[num] % nums[div] == 0)
-                        {
-                            nums[num] = 0;
-                        }
+                        nums[j - 2] = 0;
                     }
                 }
             }
+
+            Console.Write("All: ");
+            for (int j = 0; j < nums.Length; j++)
+            {
+                    Console.Write($"{nums[j]} ");
+            }
+            Console.WriteLine("");
             Console.ForegroundColor = ConsoleColor.Green;
             Console.Write("Primes: ");
             for (int j = 0; j < nums.Length; j++)
             {
                 if (nums[j] != 0)
                 {
-                    Console.Write($"{ nums[j]} ");
+                    Console.Write($"{nums[j]} ");
                 }
             }
             Console.ForegroundColor = ConsoleColor.White;
