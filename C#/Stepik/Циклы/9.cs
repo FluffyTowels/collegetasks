@@ -16,7 +16,7 @@ public class MainClass
             if (counter % 2 == 0) { hourHand += 3; } else { hourHand += 2; }
             counter++;
         }
-        if (n == 8) {hourHand += 6;}
+        if (n == 8) {hourHand += 6;} //Это костыль из-за неточности с округлением чисел
         Console.WriteLine($"{n}:{(hourHand + 30) / 6}");
 
     }
