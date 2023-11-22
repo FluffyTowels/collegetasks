@@ -4,7 +4,7 @@ namespace SumString
     {
         static void Main()
         {
-            string inpt = "апр12-=   морп345бра    2";
+            string inpt = Console.ReadLine();
             string nums = "";
             bool space = false;
             int sum = 0;
